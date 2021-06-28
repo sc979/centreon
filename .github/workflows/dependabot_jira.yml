@@ -18,8 +18,11 @@ jobs:
   create_jira:
     name: Dependabot Jira
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.id == 34628915 #dependabot's user id
+    #if: github.event.pull_request.user.id == 34628915 #dependabot's user id
     steps:
+    - name: View PR author
+      run: echo "This issue is opened by ${{ github.event.pull_request.user.login }} and has the id ${{ github.event.pull_request.user.id }}."
+
     - name: Login to Jira
       uses: atlassian/gajira-login@v2.0.0
       env:
