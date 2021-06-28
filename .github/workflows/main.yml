@@ -1,7 +1,7 @@
 #Github context:
 #https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
 
-#Get author id when an issue is opened
+name: Get author id
 
 on:
   pull_request:
